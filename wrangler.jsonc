@@ -10,7 +10,20 @@
 	"observability": {
 		"enabled": true
 	},
-	"upload_source_maps": true
+	"upload_source_maps": true,
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "link-shortener-db",
+			"database_id": "4db6988d-b973-40c3-84b1-ad11c5cfd9aa"
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "LINKS",
+			"id": "ec46e318ffc34952a15a9ecf79b7d1f2"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

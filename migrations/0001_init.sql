@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS links (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug TEXT NOT NULL UNIQUE,
+  url TEXT NOT NULL,
+  created_at INTEGER NOT NULL,
+  expires_at INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS clicks (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug TEXT NOT NULL,
+  clicked_at INTEGER NOT NULL,
+  country TEXT,
+  user_agent TEXT
+);
+
+CREATE INDEX IF NOT EXISTS idx_clicks_slug ON clicks(slug);
